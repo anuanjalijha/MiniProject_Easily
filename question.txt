@@ -1,0 +1,62 @@
+Objective
+Goal
+
+Develop a job portal website that allows recruiters to post and manage job listings and provides a user-friendly platform for job seekers to find and apply for suitable roles.
+
+▼ Acceptance Criteria
+1. Implement an MVC (Model View Controller) architecture with Express JS to separate data handling, interface rendering, and routing control.
+2. Implement EJS for server-side templating, providing dynamic HTML generation based on server data.
+3. Utilize ES6 Modules to maintain code modularity and organization.
+4. Use Express sessions for managing user sessions and a cookie-based tracking of the last visit.
+5. Use in-memory data structures for user and job management operations.
+6. Implement a login and registration system, allowing recruiters to create and log into their accounts.
+7. Allow job seekers to view all jobs, view details of a specific job, and apply to a job by providing their details
+8. Allow recruiters to create, update, delete, and view job postings, with necessary validation for each field in the job posting.
+9. Enable recruiters to view all applicants of a job, including their submitted resume files.
+10. Implement an email system to send confirmation emails to applicants after they apply to a job.
+11. Use middleware for handling authentication, tracking of the last visit, file upload processing, and sending confirmation emails.
+12. Store the resume files on the server using a file upload middleware.
+13. Ensure original and high-quality code with comprehensive documentation.
+
+▼ Steps
+Follow the following steps to build the project.
+1. Set up an Express.js application and its related configurations.
+2. Install necessary project dependencies based on the functionalities required.
+3. Configure EJS as the templating engine and create views for job seekers to browse all jobs, view details of a job, apply to jobs, and recruiters to create, update, delete, and view their job postings.
+4. Create a User model with functions for getting all the users, adding a user, and confirming user login.
+5. Create a User controller to interface with the User model and handle user registration, login, and logout
+6. Create a Job model with functions for creating a new job, retrieving all jobs, finding a job by its id, updating a job, adding a new applicant to a job, retrieving all applicants for a job, and deleting a job.
+7. Create a Job controller to interface with the Job model to create, update and delete jobs, and to manage job applicants.
+8. Implement routes for user registration, login, logout, job operations including creating, updating, and deleting job postings, and to fetch necessary views.
+9. Implement a session based user authentication and management system for recruiters.
+10. Set up middleware to handle resume uploads using Multer, send confirmation emails after applying for a job using Nodemailer, and to track a user's last visit using cookies.
+11. Document the application explaining functionalities, dependencies, and code organization for easy understanding of the codebase
+
+Data Structures
+User
+id: Unique identifier for each user.
+name: Name of the user.
+email: Email address of the user.
+password: Password for user authentication
+
+Job
+id: Unique identifier for each job.
+jobcategory: Category or type of the job.
+jobdesignation: Designation of the job.
+joblocation: Location of the job.
+companyname: Name of the company offering the job.
+salary: Salary range for the job.
+applyby: Application deadline for the job.
+skillsrequired: Array of required skills for the job.
+numberofopenings: Number of available openings for the job.
+jobposted: Date and time when the job was posted.
+applicants: Array of applicants who have applied for the job, each with their own attributes.
+
+Applicant
+applicantid: Unique identifier for each applicant.
+name: Name of the applicant.
+email: Email address of the applicant.
+contact: Contact number of the applicant.
+resumePath: Path to the applicant's resume file.
+
+
